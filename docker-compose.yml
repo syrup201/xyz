@@ -1,0 +1,9 @@
+python-dev:
+  container_name: flask-server
+  build:
+    context: ./app
+    dockerfile: Dockerfile
+  volumes:
+    - ./app:/var/app/flask_app
+  ports:
+    - "8000:8000"
